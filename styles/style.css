@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-preto: #1b1b1b;
+    --cor-cinza: #2e2e2e;
+    --cor-branco: #fafafa;
+    --cor-gradiente: linear-gradient(to right,#FF9D0A, #FF0A45);
+    --cor-amarelo: #FF9D0A;
+
+    --fonte-primaria: 'Kanit', sans-serif;
+    --fonte-secundaria: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+}
+
+.cabecalho__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-cinza);
+    padding: 1% 5%;
+}
+
+.cabecalho__menu img {
+    width: 9%; 
+    height: auto; 
+  }
+
+.cabecalho__menu__centro {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.cabecalho__menu__botão {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--cor-branco);
+    font-size: 1rem;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--cor-preto);
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--cor-branco);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    line-height: 48px;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.titulo-destaque {
+    background: var(--cor-gradiente);
+    color: transparent;
+    background-clip: text;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.apresentacao__links__botao1 {
+    display: flex;
+    justify-content: center;
+    background: var(--cor-gradiente);
+    text-align: center;
+    border-radius: 12px;
+    width: 25%;
+    font-size: 1rem;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+}
+
+.apresentacao__links__botao2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    width: 25%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-family: var(--fonte-primaria);
+    border: 1px solid var(--cor-branco);
+    border-radius: 12px;
+}
+
+.apresentacao__botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apresentacao__links__botao1:hover {
+    background-color: var(--cor-amarelo);
+}
+
+.apresentacao__links__botao2:hover {
+    background-color: var(--cor-cinza);
+}
+
+.sobre {
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-cinza);
+    gap: 56px;
+}
+
+.sobre__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.sobre__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    line-height: 48px;
+}
+
+.sobre__conteudo__texto {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.apresentacao__imagem {
+    width: 35%;
+}
+
+.rodape {
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    color: var(--cor-preto);
+    background-color: var(--cor-amarelo);
+}
+
+@media (min-width: 631px ) and (max-width: 800px){
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 10%;
+    }
+
+    .apresentacao__imagem {
+        width: 50%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .sobre {
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    .sobre__conteudo {
+        width: auto;
+    }
+
+}
